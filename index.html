@@ -38,6 +38,44 @@
 
         <section id="after-sign-in">
               <button id="sign-out">Sign Out</button>
+              <h3>Change Password</h3>
+              <form id="change-password">
+                <input type= "password" name="passwords[old]" placeholder="Old password">
+                <input type="password" name="passwords[new]" placeholder="New password">
+                <button class="submit-button" type="submit">Save changes</button>
+              </form>
+           <br>
+           <br>
+           <h1>How are you feeling?</h1>
+           <p>Rate each mood on a scale of 0-10 (if you don't feel the emotion at all, just rate it 0!)</p>
+           <form id="mood-form">
+             <label for="happiness">Happiness</label>
+             <input type="text" class="rating" name="happiness-rating" placeholder="0-10">
+             <br>
+             <label for="sadness">Sadness</label>
+             <input type="text" class="rating" name="sadness-rating" placeholder="0-10">
+             <br>
+             <label for="anxiety">Anxiety</label>
+             <input type="text" class="rating" name="anxiety-rating" placeholder="0-10">
+             <br>
+             <label for="irritability">Irritability</label>
+             <input type="text" class="rating" name="irritability-rating" placeholder="0-10">
+             <br>
+             <label for="energetic">Energetic</label>
+             <input type="text" class="rating" name="energetic-rating" placeholder="0-10">
+             <br>
+             <label for="calm">Calm</label>
+             <input type="text" class="rating" name="calm-rating" placeholder="0-10">
+             <br>
+             <label for="confident">Confident</label>
+             <input type="text" class="rating" name="confident-rating" placeholder="0-10">
+             <br>
+             <br>
+             <h3>What happened today?</h3>
+             <textarea class="day-details-textarea" rows="5" cols="30" placeholder="Any triggering events? Diet or hormonal changes? Stand out moments?"></textarea>
+             <br>
+             <button class="submit-button" type="submit">Submit</button>
+           </form>
         </section>
     </body>
 </html>

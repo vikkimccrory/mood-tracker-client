@@ -23,6 +23,7 @@ const onSignIn = function () {
   event.preventDefault()
   // Pull user data from form
   const data = getFormFields(event.target)
+
   // Make an API request
   api.signIn(data)
   // success
@@ -42,8 +43,17 @@ const onSignOut = function (event) {
     .catch(ui.signOutFailure)
 }
 
+// Change password
+const onChangePassword = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.changePassword(data)
+    .then(ui.changePasswordSuccess)
+    .catch(ui.changePasswordFailure)
+}
 module.exports = {
   onSignUp,
   onSignIn,
-  onSignOut
+  onSignOut,
+  onChangePassword
 }
