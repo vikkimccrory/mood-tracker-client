@@ -3,48 +3,90 @@
 const store = require('./../store')
 
 const signUpSuccess = function (res) {
-  // Resets the form
   $('#sign-up').trigger('reset')
-  // Messaging
-  $('#message').text('Sign Up Successful! Go Sign In :)')
+  $('#message').html('Sign Up Successful! Go Sign In :)')
+  $('#message').addClass('success')
+  setTimeout(() => {
+    $('#message').html('')
+    $('#message').removeClass('success')
+  }, 5000)
 }
+
 const signUpFailure = function () {
-  $('#message').text('Sign up failed :(')
+  $('#sign-up').trigger('reset')
+  $('#message').html('Sign up failed :(')
+  $('#message').addClass('failure')
+  setTimeout(() => {
+    $('#message').html('')
+    $('#message').removeClass('failure')
+  }, 5000)
 }
 
 const signInSuccess = function (res) {
   // Resets the form
   $('#sign-in').trigger('reset')
-  $('#message').text('Signed in successfully!')
+  $('#message').html('Signed in successfully!')
+  $('#message').addClass('success')
+  setTimeout(() => {
+    $('#message').html('')
+    $('#message').removeClass('success')
+  }, 5000)
   store.user = res.user
   $('#after-sign-in').show()
   $('#before-sign-in').hide()
 }
 
 const signInFailure = function () {
-  $('#message').text('Sign in failed')
+  $('#sign-in').trigger('reset')
+  $('#message').html('Sign in failed')
+  $('#message').addClass('failure')
+  setTimeout(() => {
+    $('#message').html('')
+    $('#message').removeClass('failure')
+  }, 5000)
 }
 
 const signOutSuccess = function () {
   // clear out the user - set the stored user to null
   store.user = null
-  $('#message').text('Signed out successfully!')
+  $('#message').html('Signed out successfully!')
+  $('#message').addClass('success')
+  setTimeout(() => {
+    $('#message').html('')
+    $('#message').removeClass('success')
+  }, 5000)
   $('#before-sign-in').show()
   $('#after-sign-in').hide()
 }
 
 const signOutFailure = function () {
-  $('#message').text('Sign out failure')
+  $('#message').html('Sign out failure')
+  $('#message').addClass('failure')
+  setTimeout(() => {
+    $('#message').html('')
+    $('#message').removeClass('failure')
+  }, 5000)
 }
 
 const changePasswordSuccess = function () {
   $('#change-password').trigger('reset')
-  $('#message').text('Password changed successfully!')
+  $('#message').html('Password changed successfully!')
+  $('#message').addClass('success')
+  setTimeout(() => {
+    $('#message').html('')
+    $('#message').removeClass('success')
+  }, 5000)
 }
 
 const changePasswordFailure = function () {
-  $('#message').text('Password change failed')
+  $('#message').html('Password change failed')
+  $('#message').addClass('failure')
+  setTimeout(() => {
+    $('#message').html('')
+    $('#message').removeClass('failure')
+  }, 5000)
 }
+
 module.exports = {
   signUpSuccess,
   signUpFailure,

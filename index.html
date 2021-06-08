@@ -37,6 +37,8 @@
         </section>
 
         <section id="after-sign-in">
+
+          <section id="after-sign-in-auth">
               <button id="sign-out">Sign Out</button>
               <h3>Change Password</h3>
               <form id="change-password">
@@ -44,38 +46,60 @@
                 <input type="password" name="passwords[new]" placeholder="New password">
                 <button class="submit-button" type="submit">Save changes</button>
               </form>
+
+          </section>
            <br>
-           <br>
+           <section id="mood-form-reload">
+            <button id="mood-form-button">Track today's mood</button>
+          </section>
+          <br>
+          <section id="destroy">
+          <h3>Delete An Entry</h3>
+          <form id="destroy-entry">
+            <input name="entry[id]" type="text" placeholder="Entry ID">
+            <button type="submit">Delete</button>
+          </form>
+          </section>
+          <br>
+          <section id="index">
+           <button id="get-all-entries">Get All Entries</button>
+           <div id="index-message"></div>
+           <div id="entry-display-get-all"></div>
+         </section>
+
+         <section id="mood">
            <h1>How are you feeling?</h1>
            <p>Rate each mood on a scale of 0-10 (if you don't feel the emotion at all, just rate it 0!)</p>
            <form id="mood-form">
              <label for="happiness">Happiness</label>
-             <input type="text" class="rating" name="happiness-rating" placeholder="0-10">
+             <input type="text" class="rating" name="entry[mood[happiness]" placeholder="0-10">
              <br>
              <label for="sadness">Sadness</label>
-             <input type="text" class="rating" name="sadness-rating" placeholder="0-10">
+             <input type="text" class="rating" name="entry[mood[sadness]" placeholder="0-10">
              <br>
              <label for="anxiety">Anxiety</label>
-             <input type="text" class="rating" name="anxiety-rating" placeholder="0-10">
+             <input type="text" class="rating" name="entry[mood[anxiety]" placeholder="0-10">
              <br>
              <label for="irritability">Irritability</label>
-             <input type="text" class="rating" name="irritability-rating" placeholder="0-10">
+             <input type="text" class="rating" name="entry[mood[irritability]" placeholder="0-10">
              <br>
              <label for="energetic">Energetic</label>
-             <input type="text" class="rating" name="energetic-rating" placeholder="0-10">
+             <input type="text" class="rating" name="entry[mood[energetic]" placeholder="0-10">
              <br>
              <label for="calm">Calm</label>
-             <input type="text" class="rating" name="calm-rating" placeholder="0-10">
+             <input type="text" class="rating" name="entry[mood[calm]" placeholder="0-10">
              <br>
              <label for="confident">Confident</label>
-             <input type="text" class="rating" name="confident-rating" placeholder="0-10">
+             <input type="text" class="rating" name="entry[mood[confident]" placeholder="0-10">
              <br>
              <br>
              <h3>What happened today?</h3>
-             <textarea class="day-details-textarea" rows="5" cols="30" placeholder="Any triggering events? Diet or hormonal changes? Stand out moments?"></textarea>
+             <textarea class="day-details" name="entry[dayDetails]" rows="5" cols="30" placeholder="Any triggering events? Diet or hormonal changes? Stand out moments?"></textarea>
              <br>
              <button class="submit-button" type="submit">Submit</button>
            </form>
+           <div id="entry-display-create"></div>
+         </section>
         </section>
     </body>
 </html>
