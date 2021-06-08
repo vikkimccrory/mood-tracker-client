@@ -47,7 +47,8 @@ const signInFailure = function () {
 }
 
 const signOutSuccess = function () {
-  // clear out the user - set the stored user to null
+  $('#entry-display-get-all').html('')
+  $('#index-message').text('')
   store.user = null
   $('#message').html('Signed out successfully!')
   $('#message').addClass('success')

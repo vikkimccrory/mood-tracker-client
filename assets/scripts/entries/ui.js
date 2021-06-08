@@ -23,19 +23,25 @@ const createEntryFailure = function (res) {
 const getAllEntriesSuccess = function (res) {
   $('#index-message').text('Here are all your entries!')
   let entryHtml = ''
+  console.log(res.entries)
   res.entries.forEach(entry => {
     entryHtml += `
    <div>
-      <h4>${entry.mood}</h4>
-      <p>${entry.dayDetails}</p>
+      <br>
+      <p>Mood Ratings: Happiness: ${entry.mood[0].happiness}, Sadness: ${entry.mood[0].sadness},
+      Anxiety: ${entry.mood[0].anxiety}, Irritability: ${entry.mood[0].irritability},
+      Energetic: ${entry.mood[0].energetic}, Calm: ${entry.mood[0].calm}, Confident: ${entry.mood[0].confident}</p>
+
+      <p>Day Details: ${entry.dayDetails}</p>
       <p>ID: ${entry._id}</p>
+      <p>-----------------------------</p>
     </div>
   `
-    $('#entry-display-get-all').html(entryHtml)
-    // Reloading the mood form functionality: will work on if I have time
-    // $('#mood').hide()
-    // $('#mood-form-reload').show()
   })
+  $('#entry-display-get-all').html(entryHtml)
+  // Reloading the mood form functionality: will work on if I have time
+  // $('#mood').hide()
+  // $('#mood-form-reload').show()
 }
 
 const getAllEntriesFailure = function (res) {
