@@ -16,4 +16,5 @@ $(() => {
   $('#mood-form').on('submit', entryEvents.onCreateEntry)
   $('#get-all-entries').on('click', entryEvents.onGetAllEntries)
   $('#destroy-entry').on('submit', entryEvents.onDestroyEntry)
+  $('#update-form').on('submit', entryEvents.onUpdateEntry)
 })

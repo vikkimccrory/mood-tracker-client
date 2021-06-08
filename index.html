@@ -60,6 +60,42 @@
             <button type="submit">Delete</button>
           </form>
           </section>
+          <section id="update">
+            <h3>Update An Entry</h3>
+            <form id="update-form">
+            <label for="entry-id">Entry ID</label>
+            <input type="text" name="entry[id]" placeholder="Entry ID">
+            <br>
+            <label for="happiness">Happiness</label>
+            <input type="text" class="rating" name="entry[mood[happiness]" placeholder="0-10">
+            <br>
+            <label for="sadness">Sadness</label>
+            <input type="text" class="rating" name="entry[mood[sadness]" placeholder="0-10">
+            <br>
+            <label for="anxiety">Anxiety</label>
+            <input type="text" class="rating" name="entry[mood[anxiety]" placeholder="0-10">
+            <br>
+            <label for="irritability">Irritability</label>
+            <input type="text" class="rating" name="entry[mood[irritability]" placeholder="0-10">
+            <br>
+            <label for="energetic">Energetic</label>
+            <input type="text" class="rating" name="entry[mood[energetic]" placeholder="0-10">
+            <br>
+            <label for="calm">Calm</label>
+            <input type="text" class="rating" name="entry[mood[calm]" placeholder="0-10">
+            <br>
+            <label for="confident">Confident</label>
+            <input type="text" class="rating" name="entry[mood[confident]" placeholder="0-10">
+            <br>
+            <br>
+            <h3>What happened today?</h3>
+            <textarea class="day-details" name="entry[dayDetails]" rows="5" cols="30" placeholder="Any triggering events? Diet or hormonal changes? Stand out moments?"></textarea>
+            <br>
+            <button class="update-button" type="submit">Update</button>
+          </form>
+
+          </section>
+
           <br>
           <section id="index">
            <button id="get-all-entries">Get All Entries</button>

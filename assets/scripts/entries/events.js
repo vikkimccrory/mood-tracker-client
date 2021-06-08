@@ -20,7 +20,6 @@ const onCreateEntry = function (event) {
 
 const onGetAllEntries = function (event) {
   event.preventDefault()
-  console.log('in onGetAllEntries')
   api.getAllEntries()
     .then(ui.getAllEntriesSuccess)
     .catch(ui.getAllEntriesFailure)
@@ -50,7 +49,7 @@ const onUpdateEntry = function (event) {
 
   api.updateEntry(entryId, entryData)
     .then(ui.updateEntrySuccess)
-    .catch(ui.onError)
+    .catch(ui.updateEntryFailure)
 }
 
 module.exports = {

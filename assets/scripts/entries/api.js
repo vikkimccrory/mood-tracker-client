@@ -47,7 +47,7 @@ const updateEntry = function (entryId, data) {
         dayDetails: data.entry.dayDetails
       }
     },
-    url: config.apiUrl + '/entries' + entryId,
+    url: config.apiUrl + '/entries/' + entryId,
     headers: {
       Authorization: `Bearer ${store.user.token}`
     }
