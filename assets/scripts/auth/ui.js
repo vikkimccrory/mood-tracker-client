@@ -81,6 +81,7 @@ const changePasswordSuccess = function () {
 }
 
 const changePasswordFailure = function () {
+  $('#change-password').trigger('reset')
   $('.message').html('Password change failed')
   $('.message').addClass('failure')
   setTimeout(() => {

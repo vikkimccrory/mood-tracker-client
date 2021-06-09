@@ -1,7 +1,6 @@
 # Mood Tracker
 
-This application allows the user to track their mood on a daily basis and keep record of the
-details of their day that could have contributed to their mood.
+This application allows the user to track their mood on a daily basis and keep record of the details of their day that could have contributed to their mood.
 
 # Deploy link
 https://vikkimccrory.github.io/mood-tracker-client/
