@@ -1,14 +1,169 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Oswald:wght@600&display=swap');
+
 
 body {
+  background-image: url('https://i.ibb.co/pLY1TjS/pastel-gradient-background.png');
+  color: black;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+}
+
+#sign-up {
+  display: none
+}
+
+#sign-up-button {
   background-color: black;
-  color: pink
+  color: #dcd0ff;
+  border-radius: 5px;
+  padding: 3px 15px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  &:hover {
+    transform: scale(1.05) perspective(1px);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+  }
 }
 
 #after-sign-in {
   display: none
+
 }
 
-#mood-form-reload {
+#after-sign-in-title {
+  background-color: black;
+  color: #dcd0ff;
+  padding: 3px 15px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+#title {
+  font-size: 50px;
+}
+
+h1, h2, h3 {
+  font-family: 'Lobster', cursive;
+}
+
+
+#before-sign-in {
+  text-align: center
+}
+
+.auth-input {
+  margin: 10px 10px;
+  padding: 3px 20px;
+}
+// Sign Out Button
+
+#sign-out {
+  background-color: black;
+  color: #dcd0ff;
+  border-radius: 5px;
+  padding: 3px 15px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  &:hover {
+    transform: scale(1.05) perspective(1px);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+  }
+}
+// Index Toggle Button
+
+#get-all-entries {
+  background-color: black;
+  color: #dcd0ff;
+  border-radius: 5px;
+  padding: 3px 15px;
+  position: absolute;
+  top: 5px;
+  right: 110px;
+  &:hover {
+    transform: scale(1.05) perspective(1px);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+  }
+}
+// Change Password Form and Toggle Button
+
+#change-password {
+  display: none;
+}
+
+#change-password-button {
+  background-color: black;
+  color: #dcd0ff;
+  border-radius: 5px;
+  padding: 3px 15px;
+  position: absolute;
+  top: 5px;
+  right: 255px;
+  &:hover {
+    transform: scale(1.05) perspective(1px);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+  }
+}
+
+// Delete an entry and toggle Button
+#destroy-entry {
   display: none
+}
+
+#destroy-button {
+  background-color: black;
+  color: #dcd0ff;
+  border-radius: 5px;
+  padding: 3px 15px;
+  position: absolute;
+  top: 5px;
+  right: 425px;
+  &:hover {
+    transform: scale(1.05) perspective(1px);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+  }
+}
+
+// Update entry and toggle button
+
+#update-form {
+  display: none
+}
+
+#update-button {
+  background-color: black;
+  color: #dcd0ff;
+  border-radius: 5px;
+  padding: 3px 15px;
+  position: absolute;
+  top: 5px;
+  right: 560px;
+  &:hover {
+    transform: scale(1.05) perspective(1px);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+  }
+}
+
+.submit-button {
+  background-color: black;
+  color: #dcd0ff;
+  border-radius: 5px;
+  padding: 3px 20px;
+  &:hover {
+    transform: scale(1.05) perspective(1px);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+  }
+}
+
+input, textarea {
+  border-radius: 5px;
+}
+
+#mood-form-submit-button {
+  font-size: 25px;
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+  padding: 3px 50px;
 }

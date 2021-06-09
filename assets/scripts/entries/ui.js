@@ -2,28 +2,26 @@
 
 const createEntrySuccess = function (res) {
   $('#mood-form').trigger('reset')
-  console.log(res)
-  $('#message').html('Entry Created!')
-  $('#message').addClass('success')
+  $('.message').html('Entry Created!')
+  $('.message').addClass('success')
   setTimeout(() => {
-    $('#message').html('')
-    $('#message').removeClass('success')
+    $('.message').html('')
+    $('.message').removeClass('success')
   }, 5000)
 }
 
 const createEntryFailure = function (res) {
-  $('#message').html('Entry Creation Failed')
-  $('#message').addClass('failure')
+  $('.message').html('Entry Creation Failed')
+  $('.message').addClass('failure')
   setTimeout(() => {
-    $('#message').html('')
-    $('#message').removeClass('failure')
+    $('.message').html('')
+    $('.message').removeClass('failure')
   }, 5000)
 }
 
 const getAllEntriesSuccess = function (res) {
-  $('#index-message').text('Here are all your entries!')
+  $('#index-message').text('Here are all your entries!').toggle()
   let entryHtml = ''
-  console.log(res.entries)
   res.entries.forEach(entry => {
     entryHtml += `
    <div>
@@ -38,56 +36,55 @@ const getAllEntriesSuccess = function (res) {
     </div>
   `
   })
-  $('#entry-display-get-all').html(entryHtml)
-  // Reloading the mood form functionality: will work on if I have time
-  // $('#mood').hide()
-  // $('#mood-form-reload').show()
+  $('#entry-display-get-all').html(entryHtml).toggle()
 }
 
 const getAllEntriesFailure = function (res) {
-  $('#message').html('Could not get all entries')
-  $('#message').addClass('failure')
+  $('.message').html('Could not get all entries')
+  $('.message').addClass('failure')
   setTimeout(() => {
-    $('#message').html('')
-    $('#message').removeClass('failure')
+    $('.message').html('')
+    $('.message').removeClass('failure')
   }, 5000)
 }
 
 const destroyEntrySuccess = function (res) {
   $('#destroy-entry').trigger('reset')
-  $('#message').html('Entry Deleted!')
-  $('#message').addClass('success')
+  $('.message').html('Entry Deleted!')
+  $('.message').addClass('success')
   setTimeout(() => {
-    $('#message').html('')
-    $('#message').removeClass('success')
+    $('.message').html('')
+    $('.message').removeClass('success')
   }, 5000)
 }
 
 const destroyEntryFailure = function () {
-  $('#message').html('Destroy Entry Failed')
-  $('#message').addClass('failure')
+  $('#destroy-entry').trigger('reset')
+  $('.message').html('Destroy Entry Failed')
+  $('.message').addClass('failure')
   setTimeout(() => {
-    $('#message').html('')
-    $('#message').removeClass('failure')
+    $('.message').html('')
+    $('.message').removeClass('failure')
   }, 5000)
 }
 
 const updateEntrySuccess = function (res) {
-  console.log(res)
-  $('#message').html('Entry successfully updated')
-  $('#message').addClass('success')
+  $('#update-form').trigger('reset')
+  $('.message').html('Entry successfully updated')
+  $('.message').addClass('success')
   setTimeout(() => {
-    $('#message').html('')
-    $('#message').removeClass('success')
+    $('.message').html('')
+    $('.message').removeClass('success')
   }, 5000)
 }
 
 const updateEntryFailure = function () {
-  $('#message').html('Entry update failed')
-  $('#message').addClass('failure')
+  $('#update-form').trigger('reset')
+  $('.message').html('Entry update failed')
+  $('.message').addClass('failure')
   setTimeout(() => {
-    $('#message').html('')
-    $('#message').removeClass('failure')
+    $('.message').html('')
+    $('.message').removeClass('failure')
   }, 5000)
 }
 

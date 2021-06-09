@@ -40,7 +40,6 @@ const onDestroyEntry = function (event) {
 
 const onUpdateEntry = function (event) {
   event.preventDefault()
-  console.log('in onUpdateEntry')
 
   const form = event.target
   const entryData = getFormFields(form)
