@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Mood Tracker</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <section id="before-sign-in">
+        <h1 id="title">Mood Tracker</h1>
+        <h4 class="message"></h4>
+          <br>
+          <br>
+          <section>
+            <form id="sign-in">
+              <h3>Sign In</h3>
+              <input class="auth-input" name="credentials[email]" required type="email" placeholder="Email Address"/>
+              <br>
+              <input class="auth-input" name="credentials[password]" required type="password" placeholder="Password"/>
+              <br>
+              <button class="submit-button" type="submit">Submit</button>
+            </form>
+          </section>
+          <section>
+            <br>
+            <button type="button" id="sign-up-button">Don't Have An Account? Sign Up!</button>
+            <form id="sign-up">
+              <h3>Sign Up</h3>
+              <input class="auth-input" name="credentials[email]" required type="email" placeholder="Email Address"/>
+              <br>
+              <input class="auth-input" name="credentials[password]" required type="password" placeholder="Password"/>
+              <br>
+              <input class="auth-input" name="credentials[password_confirmation]" required type="password" placeholder="Password... again"/>
+              <br>
+              <button class="submit-button" type="submit">Submit</button>
+            </form>
+          </section>
+        </section>
+
+        <section id="after-sign-in">
+          <h2 id="after-sign-in-title">Mood Tracker</h2>
+          <br>
+          <br>
+          <h4 class="message"></h4>
+          <h4 id="index-message"></h4>
+          <div id="entry-display-get-all"></div>
+          <section id="after-sign-in-auth">
+              <button id="sign-out">Sign Out</button>
+
+              <button type="button" id="change-password-button">Change Password</button>
+              <form id="change-password">
+                <h3>Change Password</h3>
+                <input type= "password" name="passwords[old]" placeholder="Old password">
+                <input type="password" name="passwords[new]" placeholder="New password">
+                <button class="submit-button" type="submit">Save changes</button>
+              </form>
+            </section>
+
+          <section id="destroy">
+          <button type="button" id="destroy-button">Delete Entry</button>
+            <form id="destroy-entry">
+              <h3>Delete An Entry</h3>
+              <input name="entry[id]" type="text" placeholder="Entry ID">
+              <button type="submit">Delete</button>
+            </form>
+          </section>
+
+          <section id="update">
+            <button type="button" id="update-button">Update Entry</button>
+            <form id="update-form">
+              <h3>Update An Entry</h3>
+              <label for="entry-id">Entry ID</label>
+              <input type="text" name="entry[id]" placeholder="Entry ID">
+              <br>
+              <label for="happiness">Happiness</label>
+              <input type="text" class="rating" name="entry[mood[happiness]" placeholder="0-10">
+              <br>
+              <label for="sadness">Sadness</label>
+              <input type="text" class="rating" name="entry[mood[sadness]" placeholder="0-10">
+              <br>
+              <label for="anxiety">Anxiety</label>
+              <input type="text" class="rating" name="entry[mood[anxiety]" placeholder="0-10">
+              <br>
+              <label for="irritability">Irritability</label>
+              <input type="text" class="rating" name="entry[mood[irritability]" placeholder="0-10">
+              <br>
+              <label for="energetic">Energetic</label>
+              <input type="text" class="rating" name="entry[mood[energetic]" placeholder="0-10">
+              <br>
+              <label for="calm">Calm</label>
+              <input type="text" class="rating" name="entry[mood[calm]" placeholder="0-10">
+              <br>
+              <label for="confident">Confident</label>
+              <input type="text" class="rating" name="entry[mood[confident]" placeholder="0-10">
+              <br>
+              <br>
+              <h3>What happened today?</h3>
+              <textarea class="day-details" name="entry[dayDetails]" rows="5" cols="30" placeholder="Any triggering events? Diet or hormonal changes? Stand out moments?"></textarea>
+              <br>
+              <button class="update-button" type="submit">Update</button>
+          </form>
+        </section>
+
+        <section id="index">
+           <button id="get-all-entries">Get All Entries</button>
+         </section>
+
+         <br>
+         <section id="mood">
+           <h2>How are you feeling?</h2>
+           <p>Rate each mood on a scale of 0-10 (if you don't feel the emotion at all, just rate it 0!)</p>
+           <form id="mood-form">
+             <label for="happiness">Happiness</label>
+             <input type="text" class="rating" name="entry[mood[happiness]" placeholder="0-10">
+             <br>
+             <label for="sadness">Sadness</label>
+             <input type="text" class="rating" name="entry[mood[sadness]" placeholder="0-10">
+             <br>
+             <label for="anxiety">Anxiety</label>
+             <input type="text" class="rating" name="entry[mood[anxiety]" placeholder="0-10">
+             <br>
+             <label for="irritability">Irritability</label>
+             <input type="text" class="rating" name="entry[mood[irritability]" placeholder="0-10">
+             <br>
+             <label for="energetic">Energetic</label>
+             <input type="text" class="rating" name="entry[mood[energetic]" placeholder="0-10">
+             <br>
+             <label for="calm">Calm</label>
+             <input type="text" class="rating" name="entry[mood[calm]" placeholder="0-10">
+             <br>
+             <label for="confident">Confident</label>
+             <input type="text" class="rating" name="entry[mood[confident]" placeholder="0-10">
+             <br>
+             <br>
+             <div id="day-details-section">
+               <h2>What happened today?</h2>
+               <textarea class="day-details" name="entry[dayDetails]" rows="5" cols="35" placeholder="Any triggering events? Diet or hormonal changes? Stand out moments?"></textarea>
+             </div>
+             <button id="mood-form-submit-button" class="submit-button" type="submit">Submit</button>
+           </form>
+            <div id="entry-display-create"></div>
+         </section>
+        </section>
+    </body>
+</html>
